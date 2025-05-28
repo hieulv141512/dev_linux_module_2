@@ -3,7 +3,6 @@
 #include "../humidity/humidity_sensor.h"
 #include "../light/light_sensor.h"
 #include "../pressure/pressure_sensor.h"
-#include "../temperature/temperature_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 
