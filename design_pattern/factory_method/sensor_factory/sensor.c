@@ -9,7 +9,7 @@ void sensorInitializeCommon(Sensor* sensor, SensorType type, const char* id, Rea
     }
     snprintf(sensor->id, MAX_SIZE_ID, "%s", id);
     sensor->type = type;
-    sensor->readData = readData;
+    sensor->currentValue = readData(sensor);
 }
 
 void printSensorInfo(const Sensor* sensor){
@@ -37,7 +37,7 @@ void printSensorInfo(const Sensor* sensor){
             printf("Unknown.\n");
             break;
     }
-    printf(" Sensor Value: %.2f", sensor->readData);
+    printf(" Sensor Value: %.2f", sensor->currentValue);
 }
 
 void destroySensor(Sensor* sensor){

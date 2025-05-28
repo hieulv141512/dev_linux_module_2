@@ -3,14 +3,9 @@
 
 #include "../sensor_factory/sensor.h"
 
-typedef struct {
-    Sensor base;
-    float currentValue;
-} TemperatureSensor;
-
 // Function prototypes for the temperature sensor
-TemperatureSensor* createTemperatureSensor(const char* id);
+Sensor* createTemperatureSensor(const char* id);
 
-float temperatureSensorReadData(TemperatureSensor* sensor);
+float temperatureSensorReadData(Sensor* sensor);
 
 #endif //TEMPERATURE_SENSOR_H

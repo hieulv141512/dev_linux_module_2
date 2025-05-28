@@ -3,6 +3,6 @@
 
 #include "sensor.h"
 
-Sensor* createSensor(SensorType type);
+Sensor* createSensor(SensorType type, const char* id);
 
 #endif // SENSOR_FACTORY_H
