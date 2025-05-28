@@ -17,7 +17,7 @@ void printSensorInfo(const Sensor* sensor){
         return;
     }
     printf("\n------ Sensor Information ------\n");
-    printf(" Sensor ID: %s", sensor->id);
+    printf(" Sensor ID: %s\n", sensor->id);
     printf(" Sensor Type: ");
     switch (sensor->type)
     {
@@ -37,7 +37,7 @@ void printSensorInfo(const Sensor* sensor){
             printf("Unknown.\n");
             break;
     }
-    printf(" Sensor Value: %.2f", sensor->currentValue);
+    printf(" Sensor Value: %.2f\n", sensor->currentValue);
 }
 
 void destroySensor(Sensor* sensor){
