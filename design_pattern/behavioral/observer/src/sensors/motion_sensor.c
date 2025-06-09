@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // Initialize the MotionSensor struct
-void MotionSensorInit(MotionSensor* sensor){
+void motionSensorInit(MotionSensor* sensor){
     publisherInit(&sensor->base);
     sensor->motionDetected = 0;
 }
