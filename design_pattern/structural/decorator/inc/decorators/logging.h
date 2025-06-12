@@ -13,6 +13,6 @@ typedef struct {
 int loggingSend(void* instance, const uint8_t* data, size_t length);
 int loggingReceive(void* instance, uint8_t* buffer, size_t bufferLength, size_t* receivedLength);
 LoggingDecorator* createLoggingDecorator(Channel* wrapped);
-void freeLogDecorator(LoggingDecorator* decorator);
+void freeLoggingDecorator(LoggingDecorator* decorator);
 
 #endif // LOGGING_H

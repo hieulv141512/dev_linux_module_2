@@ -20,7 +20,7 @@ int main() {
     CrcDecorator* withCrc = createCrcDecorator(withCompression->base.wrapped);
 
     // Test data
-    uint8_t testData[] = {0x01, 0x01, 0x01, 0x01, 0x02, 0x02, 0x03, 0x04, 0x04, 0x04, 0x04};
+    uint8_t testData[] = {0x01, 0x01, 0x01, 0x01, 0x02};
     size_t testDataLength = sizeof(testData);
 
     printf("Original test data (%zu bytes): ", testDataLength);
@@ -54,7 +54,7 @@ int main() {
     }
     
     // Cleanup
-    freeLogDecorator(withLogging);
+    freeLoggingDecorator(withLogging);
     freeEncryptionDecorator(withEncryption);
     freeCompressionDecorator(withCompression);
     freeCrcDecorator(withCrc);
