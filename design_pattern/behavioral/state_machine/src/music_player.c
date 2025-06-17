@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void setPlayerState(MusicPlayerContext* player, MusicPlayerState newState) {
-    player->currentState = newState;
-}
-
 MusicPlayerContext* createMusicPlayerContext(PlayerState* initState) {
     MusicPlayerContext* player = (MusicPlayerContext*)malloc(sizeof(MusicPlayerContext));
     if (player == NULL) {

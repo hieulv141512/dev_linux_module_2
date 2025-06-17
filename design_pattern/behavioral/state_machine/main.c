@@ -1,7 +1,9 @@
 #include "inc/music_player.h"
+#include "inc/player_state.h"
 
 int main() {
-    MusicPlayerContext* player = createMusicPlayerContext(createStoppedState());
+    PlayerState* initState = createStoppedState();
+    MusicPlayerContext* player = createMusicPlayerContext(initState);
 
     // Simulate user interactions
     player->currentStateHandler->pressStop(player);  // Stop

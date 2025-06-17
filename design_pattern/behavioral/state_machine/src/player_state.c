@@ -27,7 +27,6 @@ PlayerState* createStoppedState() {
     stopped->pressPlay = stoppedPlayButtonPressed;
     stopped->pressPause = stoppedPauseButtonPressed;
     stopped->pressStop = stoppedStopButtonPressed;
-    stopped->player = NULL;
 
     return stopped;
 }
@@ -57,7 +56,6 @@ PlayerState* createPlayingState() {
     playing->pressPlay = playingPlayButtonPressed;
     playing->pressPause = playingPauseButtonPressed;
     playing->pressStop = playingStopButtonPressed;
-    playing->player = NULL;
 
     return playing;
 }
@@ -87,15 +85,26 @@ PlayerState* createPausedState() {
     paused->pressPlay = pausedPlayButtonPressed;
     paused->pressPause = pausedPauseButtonPressed;
     paused->pressStop = pausedStopButtonPressed;
-    paused->player = NULL;
 
     return paused;
 }
 
-// void printStatus(MusicPlayerContext* player) {
-//     printf("Current Player Status: %s.\n", MusicPlayerStates[player->currentState]);
-// }
-
-void setPlayerContext(PlayerState* state, MusicPlayerContext* player) {
-    state->player = player;
+void setPlayerState(MusicPlayerContext* player, MusicPlayerState newState) {
+    player->currentState = newState;
+    if (player->currentStateHandler != NULL) {
+        free(player->currentStateHandler);
+    }
+    
+    switch (newState) {
+        case STATE_STOPPED:
+            player->currentStateHandler = createStoppedState();
+            break;
+        case STATE_PLAYING:
+            player->currentStateHandler = createPlayingState();
+            break;
+        case STATE_PAUSED:
+            player->currentStateHandler = createPausedState();
+        default:
+            break;
+    }
 }
