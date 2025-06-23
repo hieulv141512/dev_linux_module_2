@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-float pressureSensorReadData(Sensor* sensor){
+float pressureSensorReadData(Sensor* sensor) {
     if (sensor == NULL) {
         fprintf(stderr, "Error: NULL sensor cannot read data.\n");
         return -1;
@@ -12,7 +12,7 @@ float pressureSensorReadData(Sensor* sensor){
     return tmpValue;
 }
 
-Sensor* createPressureSensor(const char* id){
+Sensor* createPressureSensor(const char* id) {
     Sensor* newSensor = (Sensor*)malloc(sizeof(Sensor));
     if (newSensor == NULL) {
         fprintf(stderr, "Failed to allocate memory for Pressure Sensor.\n");

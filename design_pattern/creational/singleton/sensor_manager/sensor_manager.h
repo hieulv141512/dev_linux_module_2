@@ -22,13 +22,9 @@ typedef struct {
 
 // Function declarations
 SensorManager* getSensorManagerInstance();
-
 void collectSensorData(SensorManager* manager, int sensorId, float value, const char* sensorType);
-
 bool pushDataToDatabase(SensorManager* manager);
-
 void setupDatabaseConnection(SensorManager* manager);
-
 void destroySensorManagerInstance();
 
 #endif // SENSOR_MANAGER_H

@@ -5,39 +5,34 @@ int main() {
     // Create the first sensor manager instance
     SensorManager* manager1 = getSensorManagerInstance();
     if (manager1 == NULL) {
-        fprintf(stderr, "Failed to create manager1. \n");
+        fprintf(stderr, "Failed to create manager1.\n");
         return 1;
     }
 
     // Attemp to create a second sensor manager
     SensorManager* manager2 = getSensorManagerInstance();
     if (manager2 == NULL){
-        printf("Failed to create manager2 because a instance already exists.\n\n");
+        printf("Failed to create manager2 because a instance already exists.\n");
     }
 
     // Connect to database
     setupDatabaseConnection(manager1);
 
-    // Collect some data
     printf("\n ------ Collecting data ------\n");
     collectSensorData(manager1, 10, 30, "sensorLight");
     collectSensorData(manager1, 11, 20, "sensorTemperature");
     collectSensorData(manager1, 12, 50, "sensorHumidity");
 
-    // Push data to database
     printf("\n ------ Pushing data ------\n");
     pushDataToDatabase(manager1);
 
-    // Collect more data
     printf("\n ------ Collecting more data ------\n");
     collectSensorData(manager1, 13, 50, "sensorLight");
     collectSensorData(manager1, 14, 35, "sensorTemperature");
 
-    // Push more data to database
     printf("\n ------ Pushing more data ------\n");
     pushDataToDatabase(manager1);
 
-    // Try to collect too much data
     printf("\n ------ Testing buffer full ------\n");
     for (int i = 0; i < MAX_SENSOR_NODES + 2; i++) {
         collectSensorData(manager1, 20 + i, 10 * i, "sensorLight");

@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 // Function implementations
-void sensorInitializeCommon(Sensor* sensor, SensorType type, const char* id, ReadDataFunc readData){
+void sensorInitializeCommon(Sensor* sensor, SensorType type, const char* id, ReadDataFunc readData) {
     if (sensor == NULL) {
         return;
     }
@@ -12,7 +12,7 @@ void sensorInitializeCommon(Sensor* sensor, SensorType type, const char* id, Rea
     sensor->currentValue = readData(sensor);
 }
 
-void printSensorInfo(const Sensor* sensor){
+void printSensorInfo(const Sensor* sensor) {
     if (sensor == NULL) {
         return;
     }
@@ -40,7 +40,7 @@ void printSensorInfo(const Sensor* sensor){
     printf(" Sensor Value: %.2f\n", sensor->currentValue);
 }
 
-void destroySensor(Sensor* sensor){
+void destroySensor(Sensor* sensor) {
     if (sensor != NULL) {
         free(sensor);
     }

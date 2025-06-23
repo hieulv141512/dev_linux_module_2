@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-float lightSensorReadData(Sensor* sensor){
+float lightSensorReadData(Sensor* sensor) {
     if (sensor == NULL) {
         fprintf(stderr, "Error: NULL sensor cannot read data.\n");
         return -1;
@@ -12,7 +12,7 @@ float lightSensorReadData(Sensor* sensor){
     return tmpValue;
 }
 
-Sensor* createLightSensor(const char* id){
+Sensor* createLightSensor(const char* id) {
     Sensor* newSensor = (Sensor*)malloc(sizeof(Sensor));
     if (newSensor == NULL) {
         fprintf(stderr, "Failed to allocate memory for Light Sensor.\n");

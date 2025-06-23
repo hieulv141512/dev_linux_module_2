@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-Sensor* createSensor(SensorType type, const char* id){
+Sensor* createSensor(SensorType type, const char* id) {
     switch (type)
     {
         case SENSOR_TYPE_TEMPERATURE:
