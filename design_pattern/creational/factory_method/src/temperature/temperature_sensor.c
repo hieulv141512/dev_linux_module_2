@@ -1,4 +1,4 @@
-#include "temperature_sensor.h"
+#include "../../inc/temperature/temperature_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 

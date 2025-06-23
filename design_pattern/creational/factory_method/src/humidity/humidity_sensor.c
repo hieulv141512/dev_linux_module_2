@@ -1,4 +1,4 @@
-#include "humidity_sensor.h"
+#include "../../inc/humidity/humidity_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 

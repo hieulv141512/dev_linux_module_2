@@ -1,4 +1,4 @@
-#include "light_sensor.h"
+#include "../../inc/light/light_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 

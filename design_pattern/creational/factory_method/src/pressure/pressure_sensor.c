@@ -1,4 +1,4 @@
-#include "pressure_sensor.h"
+#include "../../inc/pressure/pressure_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 

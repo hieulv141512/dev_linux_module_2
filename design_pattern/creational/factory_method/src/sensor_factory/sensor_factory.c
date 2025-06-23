@@ -1,8 +1,8 @@
-#include "sensor_factory.h"
-#include "../temperature/temperature_sensor.h"
-#include "../humidity/humidity_sensor.h"
-#include "../light/light_sensor.h"
-#include "../pressure/pressure_sensor.h"
+#include "../../inc/sensor_factory/sensor_factory.h"
+#include "../../inc/temperature/temperature_sensor.h"
+#include "../../inc/humidity/humidity_sensor.h"
+#include "../../inc/light/light_sensor.h"
+#include "../../inc/pressure/pressure_sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 

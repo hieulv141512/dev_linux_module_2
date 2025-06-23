@@ -1,5 +1,5 @@
-#include "sensor_factory/sensor_factory.h"
-#include "sensor_factory/sensor.h"
+#include "inc/sensor_factory/sensor_factory.h"
+#include "inc/sensor_factory/sensor.h"
 #include <stdio.h>
 #include <stdlib.h>
 

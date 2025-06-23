@@ -1,4 +1,4 @@
-#include "sensor.h"
+#include "../../inc/sensor_factory/sensor.h"
 #include <stdlib.h>
 #include <stdio.h>
 
