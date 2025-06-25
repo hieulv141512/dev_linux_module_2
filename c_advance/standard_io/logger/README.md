@@ -1,5 +1,3 @@
----
-
 ## Tóm tắt chương trình
 
 Chương trình C này là một ứng dụng minh họa cho một **module ghi nhật ký (logger) tùy chỉnh**. Mục đích chính của nó là trình bày cách xây dựng một hệ thống logger linh hoạt và mạnh mẽ, có khả năng:
@@ -10,8 +8,6 @@ Chương trình C này là một ứng dụng minh họa cho một **module ghi 
 * **Hỗ trợ đa thể hiện (Multiple Instances)**: Có thể tạo và quản lý **nhiều đối tượng logger độc lập** trong cùng một ứng dụng, mỗi đối tượng có cấu hình riêng về file log và mức độ lọc.
 
 Nói cách khác, chương trình này cho thấy một cách tiếp cận thực tế để thay thế `printf()` đơn thuần bằng một hệ thống ghi log có tổ chức và khả năng tùy biến cao, rất hữu ích trong phát triển phần mềm nhúng hoặc các ứng dụng lớn.
-
----
 
 ## Chương trình hoạt động ra sao?
 
