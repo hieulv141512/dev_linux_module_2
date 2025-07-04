@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "smart_home_facade/smart_home_facade.h"
+#include "inc/smart_home_facade.h"
 
 int main(){
     SmartHomeFacade* smartHome = createSmartHomeFacade();
-    if (smartHome == NULL){
+    if (smartHome == NULL) {
         return 1;
     }
 

@@ -1,10 +1,10 @@
-#include "smart_home_facade.h"
+#include "../inc/smart_home_facade.h"
 #include <stdlib.h>
 #include <stdio.h>
 
-SmartHomeFacade* createSmartHomeFacade(){
+SmartHomeFacade* createSmartHomeFacade() {
     SmartHomeFacade* facade = (SmartHomeFacade*)malloc(sizeof(SmartHomeFacade));
-    if (facade == NULL){
+    if (facade == NULL) {
         fprintf(stderr, "Error: Failed to allocate memory for SmartHomeFacade instance.\n");
         return NULL;
     }
@@ -16,24 +16,24 @@ SmartHomeFacade* createSmartHomeFacade(){
     return facade;
 }
 
-void activateMorningRoutine(SmartHomeFacade* facade){
-    if (facade != NULL){
+void activateMorningRoutine(SmartHomeFacade* facade) {
+    if (facade != NULL) {
         printf("Facade: Set morning routine.\n");
         facade->security->deactivateAlarm();
         facade->hvac->setTemperature(26);
     }
 }
 
-void activateAwayMode(SmartHomeFacade* facade){
-    if (facade != NULL){
+void activateAwayMode(SmartHomeFacade* facade) {
+    if (facade != NULL) {
         printf("Facade: Set away mode.\n");
         facade->security->activateAlarm();
         facade->lighting->turnOff();
     }
 }
 
-void setMovieNightScene(SmartHomeFacade* facade){
-    if (facade != NULL){
+void setMovieNightScene(SmartHomeFacade* facade) {
+    if (facade != NULL) {
         printf("Facade: Set movie night scene.\n");
         facade->hvac->setTemperature(24);
         facade->lighting->setBrightness(4);

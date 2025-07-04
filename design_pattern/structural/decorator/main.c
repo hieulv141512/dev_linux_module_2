@@ -25,16 +25,14 @@ int main() {
 
     printf("Original test data (%zu bytes): ", testDataLength);
     for (size_t i = 0; i < testDataLength; i++) {
-        printf("%02X ", testData[i]);
+        printf("%02X", testData[i]);
     }
     printf("\n\n");
 
-    // Send data through decorated channel
     printf("=== SENDING DATA ===\n");
     int sendResult = withCrc->base.wrapped->send(withCrc->base.wrapped->instance, testData, testDataLength);
     printf("Send result: %d\n\n", sendResult);
 
-    // Receive data through decorated channel
     printf("=== RECEIVING DATA ===\n");
     uint8_t receiveBuffer[256];
     size_t receivedLength;

@@ -64,7 +64,7 @@ CompressionDecorator* createCompressionDecorator(Channel* wrapped) {
     return comp;
 }
 
-void freeCompressionDecorator(CompressionDecorator* decorator){
+void freeCompressionDecorator(CompressionDecorator* decorator) {
     if (decorator != NULL) {
         free(decorator->base.wrapped);
         free(decorator);

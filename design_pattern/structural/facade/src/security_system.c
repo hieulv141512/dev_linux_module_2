@@ -1,20 +1,20 @@
-#include "security_system.h"
+#include "../inc/security_system.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void activateAlarm(){
+void activateAlarm() {
     printf("Security: Activated alarm.\n");
 }
 
-void deactivateAlarm(){
+void deactivateAlarm() {
     printf("Security: Deactivated alarm.\n");
 }
 
-void monitorSensors(){
+void monitorSensors() {
     printf("Security: Monitoring sensors.\n");
 }
 
-SecuritySystem* createSecuritySystem(){
+SecuritySystem* createSecuritySystem() {
     SecuritySystem* system = (SecuritySystem*)malloc(sizeof(SecuritySystem));
     if (system == NULL){
         fprintf(stderr, "Error: Failed to allocate memory for Security System instance.\n");

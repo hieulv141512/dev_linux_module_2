@@ -5,13 +5,13 @@
 #include <stdlib.h>
 
 // Uart channel implementations
-int uartSend(void* instance, const uint8_t* data, size_t length){
+int uartSend(void* instance, const uint8_t* data, size_t length) {
     UartChannel* uart = (UartChannel*)instance;
-    if (!uart || !data || length == 0){
+    if (!uart || !data || length == 0) {
         return COMM_ERROR_INVALID_PARAM;
     }
 
-    if (uart->txLength + length > sizeof(uart->txBuffer)){
+    if (uart->txLength + length > sizeof(uart->txBuffer)) {
         return COMM_ERROR_BUFFER_FULL;
     }
 
@@ -22,7 +22,7 @@ int uartSend(void* instance, const uint8_t* data, size_t length){
 
     return (int)length;
 }
-int uartReceive(void * instance, uint8_t* buffer, size_t bufferLength, size_t* receiveLength){
+int uartReceive(void * instance, uint8_t* buffer, size_t bufferLength, size_t* receiveLength) {
     UartChannel* uart = (UartChannel*)instance;
     if (!uart || !buffer || !receiveLength) {
         return COMM_ERROR_INVALID_PARAM;
@@ -37,16 +37,16 @@ int uartReceive(void * instance, uint8_t* buffer, size_t bufferLength, size_t* r
     return (int)copy_length;
 }
 
-Channel* createUartChannel(){
+Channel* createUartChannel() {
     UartChannel* uart = (UartChannel*)malloc(sizeof(UartChannel));
-    if (uart == NULL){
+    if (uart == NULL) {
         fprintf(stderr, "Failed to allocate memmory for UART channel instance. \n");
         return NULL;
     }
     memset(uart, 0, sizeof(UartChannel));
 
     Channel* channel = (Channel*)malloc(sizeof(Channel));
-    if (channel == NULL){
+    if (channel == NULL) {
         fprintf(stderr, "Failed to allocate memmory for channel instance. \n");
         return NULL;
     }

@@ -1,9 +1,9 @@
 #ifndef SMART_HOME_FACADE_H
 #define SMART_HOME_FACADE_H
 
-#include "../lighting/lighting_system.h"
-#include "../hvac/hvac_system.h"
-#include "../security/security_system.h"
+#include "lighting_system.h"
+#include "hvac_system.h"
+#include "security_system.h"
 
 typedef struct {
     LightSystem* lighting;

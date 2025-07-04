@@ -45,7 +45,7 @@ EncryptionDecorator* createEncryptionDecorator(Channel* wrapped, uint8_t key) {
     return enc;
 }
 
-void freeEncryptionDecorator(EncryptionDecorator* decorator){
+void freeEncryptionDecorator(EncryptionDecorator* decorator) {
     if (decorator != NULL) {
         free(decorator->base.wrapped);
         free(decorator);

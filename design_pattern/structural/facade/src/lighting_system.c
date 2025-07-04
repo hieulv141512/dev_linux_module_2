@@ -1,20 +1,20 @@
-#include "lighting_system.h"
+#include "../inc/lighting_system.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void turnOn(){
+void turnOn() {
     printf("Lighting: Turned on the light.\n");
 }
 
-void turnOff(){
+void turnOff() {
     printf("Lighting: Turned off the light.\n");
 }
 
-void setBrightness(int level){
+void setBrightness(int level) {
     printf("Lighting: Set brightness to level %d.\n", level);
 }
 
-LightSystem* createLightSystem(){
+LightSystem* createLightSystem() {
     LightSystem* system = (LightSystem*)malloc(sizeof(LightSystem));
     if (system == NULL) {
         fprintf(stderr, "Error: Failed to allocate memory for Lighting System instance.\n");
