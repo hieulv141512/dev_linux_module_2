@@ -1,5 +1,3 @@
----
-
 ## Tóm tắt chương trình
 
 Hệ thống Quản lý Cảm biến (Sensor Manager), được thiết kế dựa trên **mẫu thiết kế Singleton**. Mục tiêu chính của chương trình là minh họa cách một thể hiện duy nhất của `SensorManager` được tạo và sử dụng để thu thập, lưu trữ, và đẩy dữ liệu cảm biến vào một cơ sở dữ liệu (được mô phỏng).

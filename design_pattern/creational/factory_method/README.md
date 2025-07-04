@@ -1,5 +1,3 @@
----
-
 ## Tóm tắt chức năng chương trình
 
 Chương trình C này minh họa việc sử dụng **Factory Method Pattern** để tạo và quản lý các đối tượng cảm biến khác nhau. Chức năng cốt lõi của nó là:
