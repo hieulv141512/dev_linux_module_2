@@ -1,6 +1,6 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H
-#include "../book/book.h"
+#include "book.h"
 
 #define INITIAL_CAPACITY 10
 

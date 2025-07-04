@@ -1,13 +1,13 @@
-#include "book.h"
+#include "../inc/book.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 
 // Function Implementations
-Book* createBook(const char* bookTitle, const char* bookAuthor, const char* bookId, bool isBorrowed){
+Book* createBook(const char* bookTitle, const char* bookAuthor, const char* bookId, bool isBorrowed) {
     Book* newBook = (Book*)malloc(sizeof(Book));
-    if (newBook == NULL){
+    if (newBook == NULL) {
         printf("Failed to allocate memory for new book.");
         return NULL;
     }
@@ -20,7 +20,7 @@ Book* createBook(const char* bookTitle, const char* bookAuthor, const char* book
     return newBook;
 }
 
-void printBook(const Book* book){
+void printBook(const Book* book) {
     if (book == NULL){
         printf("Error: Cannot print NULL book.\n");
         return;
@@ -33,7 +33,7 @@ void printBook(const Book* book){
     printf("--------------------\n");
 }
 
-void destroyBook(Book* book){
+void destroyBook(Book* book) {
     if (book != NULL){
         free(book);
     }

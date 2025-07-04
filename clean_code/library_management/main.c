@@ -1,5 +1,5 @@
-#include "library/library.h"
-#include "book/book.h"
+#include "inc/library.h"
+#include "inc/book.h"
 #include <stdio.h>
 
 int main() {
@@ -23,7 +23,6 @@ int main() {
         return 1;
     }
 
-    // Add books to the library
     printf("\n--- Adding Books ---\n");
     addBookToLibrary(myLibrary, book1);
     addBookToLibrary(myLibrary, book2);
@@ -48,7 +47,6 @@ int main() {
         printf("Book with ID ISBN002 not found.\n");
     }
 
-    // Update a book
     printf("\n--- Updating Book Status ---\n");
     if (updateBook(myLibrary, "ISBN001", NULL, NULL, true)) {
         printf("Successfully borrowed ISBN001.\n");
@@ -69,7 +67,6 @@ int main() {
 
     listAllBooks(myLibrary);
 
-    // Remove a book
     printf("\n--- Removing Book ---\n");
     if (removeBookFromLibrary(myLibrary, "ISBN003")) {
         printf("ISBN003 removed successfully.\n");
@@ -84,7 +81,6 @@ int main() {
 
     listAllBooks(myLibrary);
 
-    // Destroy the library and all its books
     destroyLibrary(myLibrary);
  
     return 0;
