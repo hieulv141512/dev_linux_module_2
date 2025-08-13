@@ -6,11 +6,25 @@
 #define MAX_PARTITIONS 10
 #define PARTITION_NAME_LEN 64
 #define IP_ADDRESS_LEN 32
+#define KERNEL_VERSION_LEN 256
 
 // CPU info
 typedef struct {
+    double user;
+    double nice;
+    double system;
+    double idle;
+    double iowait;
+    double irq;
+    double softirq;
+    double steal;
+    double guest;
+    double guest_nice;
+} CoreTimes;
+
+typedef struct {
     float overall_usage;
-    float core_usages[2];
+    CoreTimes *core_usages;
     float cpu_temperature;
     float frequency;
 } CPUStats;
@@ -53,10 +67,19 @@ typedef struct {
 // System info
 typedef struct {
     long uptime_seconds;
-    char kernel_version[256];
+    char kernel_version[KERNEL_VERSION_LEN];
     float load_avg_1;
     float load_avg_5;
     float load_avg_15;
 } SystemStats;
+
+// Embedded monitor facade
+typedef struct {
+    CPUStats cpu_stats;
+    MemoryStats memory_stats;
+    DiskStats disk_stats;
+    NetworkStats network_stats;
+    SystemStats system_stats;
+} EmbeddedMonitorFacade;
 
 #endif // DATA_STRUCTURES_H
