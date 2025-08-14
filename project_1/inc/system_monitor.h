@@ -3,8 +3,8 @@
 
 #include "data_structures.h"
 
-SystemStats create_system_monitor_instance();
+SystemStats* get_system_stats();
 
-void get_system_stats(SystemStats *stats);
+void free_system_stats(SystemStats *stats);
 
 #endif // SYSTEM_MONITOR_H

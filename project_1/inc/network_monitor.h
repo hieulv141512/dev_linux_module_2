@@ -3,8 +3,8 @@
 
 #include "data_structures.h"
 
-NetworkStats create_network_monitor_instance();
+NetworkStats* get_network_stats();
 
-void get_network_stats(NetworkStats *stats);
+void free_network_stats(NetworkStats *stats);
 
 #endif // NETWORK_MONITOR_H

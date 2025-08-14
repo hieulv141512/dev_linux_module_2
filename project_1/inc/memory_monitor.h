@@ -3,8 +3,7 @@
 
 #include "data_structures.h"
 
-MemoryStats create_memory_monitor_instance();
-
-void get_memory_stats(MemoryStats *stats);
+MemoryStats* get_memory_stats();
+void free_memory_stats(MemoryStats *stats);
 
 #endif // MEMORY_MONITOR_H
